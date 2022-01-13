@@ -10,8 +10,8 @@ using asp_assign_1.Data;
 
 namespace asp_assign_1.Migrations
 {
-    [DbContext(typeof(EventDbContext.EventsDbContext))]
-    partial class EventsDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(EventDbContext))]
+    partial class EventDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

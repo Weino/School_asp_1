@@ -11,8 +11,8 @@ using asp_assign_1.Data;
 
 namespace asp_assign_1.Migrations
 {
-    [DbContext(typeof(EventDbContext.EventsDbContext))]
-    [Migration("20220112092546_init")]
+    [DbContext(typeof(EventDbContext))]
+    [Migration("20220113105208_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

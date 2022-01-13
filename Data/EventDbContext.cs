@@ -3,11 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace asp_assign_1.Data
 {
-    public class EventDbContext
+    public class EventDbContext : DbContext
     {
-        public class EventsDbContext : DbContext
-        {
-            public EventsDbContext(DbContextOptions<EventsDbContext> options)
+            public EventDbContext(DbContextOptions<EventDbContext> options)
                 : base(options)
             {
 
@@ -17,7 +15,5 @@ namespace asp_assign_1.Data
             public DbSet<Attendee> Attendees { get; set; }
             public DbSet<Event> Events { get; set; }
 
-
-        }
     }
 }

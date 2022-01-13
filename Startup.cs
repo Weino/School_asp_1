@@ -1,3 +1,4 @@
+using asp_assign_1.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,8 +28,8 @@ namespace asp_assign_1
         {
             services.AddRazorPages();
 
-            services.AddDbContext<EventsDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("EventsDbContext"))
+            services.AddDbContext<EventDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("EventDbContext"))
                     );
         }
 
