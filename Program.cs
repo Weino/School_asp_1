@@ -16,7 +16,9 @@ namespace asp_assign_1
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+            SeedingDb(host);
+            host.Run();
         }
 
         static void SeedingDb(IHost host)
@@ -41,6 +43,8 @@ namespace asp_assign_1
                     new Event(){Title="IFK - KFF", Description="Omgång 2 Allsvenskan", Place="Gamla Ullevi", Date=new DateTime(2022,4,7), SpotsAvailable=1203},
                     new Event(){Title="AIK - IFK", Description="Omgång 3 Allsvenskan", Place="Friends Arena", Date=new DateTime(2022,4,7), SpotsAvailable=1203}
                 });
+
+                context.SaveChanges();
             }
         }
 
