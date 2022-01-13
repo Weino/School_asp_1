@@ -1,0 +1,45 @@
+﻿@page
+@model asp_assign_1.Pages.MyEventsModel
+
+@{
+    ViewData["Title"] = "My Events";
+}
+
+<h1>My Events</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Place)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Date)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.AttendeeEvent)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Place)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Date)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
