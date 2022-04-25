@@ -11,7 +11,6 @@ namespace asp_assign_1.Models
         public Organizer Organizer { get; set; }
         public string Description { get; set; }
         public string Place { get; set; }
-        public string Address { get; set; }
         public DateTime Date { get; set; }
 
         [Display(Name = "Spots Available")]

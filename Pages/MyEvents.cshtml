@@ -1,43 +1,32 @@
 ﻿@page
 @model asp_assign_1.Pages.MyEventsModel
 
-@{
-    ViewData["Title"] = "My Events";
-}
 
-<h1>My Events</h1>
+<h1>Mina Matcher</h1>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Place)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Date)
-            </th>
+            <th>Title</th>
+            <th>Location</th>
+            <th>Date</th>
+            
         </tr>
     </thead>
     <tbody>
-        @foreach(var item in Model.AttendeeEvent)
+        @foreach(var item in Model.Attendee.Events)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Event.Title)
+                    @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Event.Description)
+                    @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Event.Place)
+                    @Html.DisplayFor(modelItem => item.Place)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Event.Date)
+                    @Html.DisplayFor(modelItem => item.Date)
                 </td>
             </tr>
         }

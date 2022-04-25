@@ -36,35 +36,17 @@ namespace asp_assign_1.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("OrganizerId")
+                        .HasColumnType("int");
+
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("OrganizerId");
+
                     b.ToTable("Attendees");
-                });
-
-            modelBuilder.Entity("asp_assign_1.Models.AttendeeEvent", b =>
-                {
-                    b.Property<int>("AttendeeEventId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AttendeeEventId"), 1L, 1);
-
-                    b.Property<int>("AttendeeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EventId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AttendeeEventId");
-
-                    b.HasIndex("AttendeeId");
-
-                    b.HasIndex("EventId");
-
-                    b.ToTable("AttendeeEvents");
                 });
 
             modelBuilder.Entity("asp_assign_1.Models.Event", b =>
@@ -74,9 +56,6 @@ namespace asp_assign_1.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -140,23 +119,11 @@ namespace asp_assign_1.Migrations
                     b.ToTable("AttendeeEvent");
                 });
 
-            modelBuilder.Entity("asp_assign_1.Models.AttendeeEvent", b =>
+            modelBuilder.Entity("asp_assign_1.Models.Attendee", b =>
                 {
-                    b.HasOne("asp_assign_1.Models.Attendee", "Attendee")
-                        .WithMany()
-                        .HasForeignKey("AttendeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("asp_assign_1.Models.Event", "Event")
-                        .WithMany()
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Attendee");
-
-                    b.Navigation("Event");
+                    b.HasOne("asp_assign_1.Models.Organizer", null)
+                        .WithMany("Attendees")
+                        .HasForeignKey("OrganizerId");
                 });
 
             modelBuilder.Entity("asp_assign_1.Models.Event", b =>
@@ -185,6 +152,8 @@ namespace asp_assign_1.Migrations
 
             modelBuilder.Entity("asp_assign_1.Models.Organizer", b =>
                 {
+                    b.Navigation("Attendees");
+
                     b.Navigation("Events");
                 });
 #pragma warning restore 612, 618

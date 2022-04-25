@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pv3A/gaWud0Gy/IERAs4iO6OZ5p7/qxC3G3+zwUo+tDSgiKoqauTyNvk58Qs0ytg9xvmHNXONTiuFg7o1D3Kvw==",
+  "dgSpecHash": "95cHAxLgJP5rBTU31ewQpnHX6enJtSDJiR9aZGCUNsTbl3O4Rx4rK4gIOlcdTz19Uhc6u+rslrEiErmVEamxIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\weina\\source\\repos\\asp_assign_1\\asp_assign_1\\asp_assign_1.csproj",
+  "projectFilePath": "C:\\Users\\weina\\asp_school_assign1\\asp_assign_1\\asp_assign_1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\weina\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\weina\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -1,0 +1,70 @@
+﻿@page
+@model asp_assign_1.Pages.JoinEventModel
+
+
+<div>
+    <h1>Event</h1>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Event.Title)                    
+            </dt>
+            <dd class="col-sm-10">
+                     @Html.DisplayFor(model => model.Event.Title)
+            </dd>
+            <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Event.Description)                    
+            </dt>
+            <dd class="col-sm-10">
+                     @Html.DisplayFor(model => model.Event.Description)
+            </dd>
+            <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Event.Place)                    
+            </dt>
+            <dd class="col-sm-10">
+                     @Html.DisplayFor(model => model.Event.Place)
+            </dd>
+            <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Event.Date)                    
+            </dt>
+            <dd class="col-sm-10">
+                     @Html.DisplayFor(model => model.Event.Date)
+            </dd>
+            <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Event.SpotsAvailable)                    
+            </dt>
+            <dd class="col-sm-10">
+                     @Html.DisplayFor(model => model.Event.SpotsAvailable)
+            </dd>
+            <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Event.Organizer)                    
+            </dt>
+            <dd class="col-sm-10">
+                     @Html.DisplayFor(model => model.Event.Organizer.Name)
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<div>
+    <div>
+        <form method="post">
+            <input type="submit" asp-route-id="@Model.Event.Id" class="btn btn-primary" value="Join" />
+        </form>
+        </div>
+
+        <div class="buttons btn-dark rounded p-2">
+            <button onclick="window.location.href='./MyEvents';"> 
+                Mina Matcher
+            </button>
+
+         <div class="buttons btn-dark rounded p-2">
+            <button onclick="window.location.href='./Event';"> 
+                 Fler Matcher
+            </button>
+        </div>
+    </div>
+</div>
+
+

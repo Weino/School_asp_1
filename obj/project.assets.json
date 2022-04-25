@@ -11604,11 +11604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\weina\\source\\repos\\asp_assign_1\\asp_assign_1\\asp_assign_1.csproj",
+      "projectUniqueName": "C:\\Users\\weina\\asp_school_assign1\\asp_assign_1\\asp_assign_1.csproj",
       "projectName": "asp_assign_1",
-      "projectPath": "C:\\Users\\weina\\source\\repos\\asp_assign_1\\asp_assign_1\\asp_assign_1.csproj",
+      "projectPath": "C:\\Users\\weina\\asp_school_assign1\\asp_assign_1\\asp_assign_1.csproj",
       "packagesPath": "C:\\Users\\weina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\weina\\source\\repos\\asp_assign_1\\asp_assign_1\\obj\\",
+      "outputPath": "C:\\Users\\weina\\asp_school_assign1\\asp_assign_1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\weina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11700,7 +11700,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

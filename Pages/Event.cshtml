@@ -14,11 +14,14 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Event[0].Description) 
-                </th><th>
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Event[0].Place) 
-                </th><th>
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Event[0].Date) 
-                </th><th>
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Event[0].SpotsAvailable) 
                 </th>
             </tr>
@@ -41,6 +44,10 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.SpotsAvailable)
+                </td>
+
+                <td>
+                    <a asp-page="./JoinEvent" asp-route-id="@item.Id">Join</a>
                 </td>
             </tr>           
         }

@@ -1,10 +1,7 @@
 ﻿using asp_assign_1.Data;
 using asp_assign_1.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,12 +17,13 @@ namespace asp_assign_1.Pages
             _ctx = ctx;
         }
 
-        public IList<AttendeeEvent> AttendeeEvent {  get; set; }
-        public async void OnGetAsync()
+        public Attendee Attendee {  get; set; }
+
+        public async Task OnGetAsync()
         {
-                AttendeeEvent = await _ctx.AttendeeEvents
-                .Include(r => r.Event)
-                .Include(r => r.Attendee).ToListAsync(); 
+            Attendee = await _ctx.Attendees.Where(a => a.Id == 1)
+                .Include(e => e.Events)
+                .FirstOrDefaultAsync();
         }
     }
 }

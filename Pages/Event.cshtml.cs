@@ -24,7 +24,7 @@ namespace asp_assign_1.Pages
 
         public async Task OnGetAsync()
         {
-            Event = await _ctx.Events.ToListAsync();
+            Event = await _ctx.Events.Include(@event => @event.Organizer).ToListAsync();
         }
     }
 }
